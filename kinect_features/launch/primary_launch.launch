@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find openni_launch)/launch/openni.launch" />
+  <node name="Converter" pkg="kinect_features" type="ConvertToPCLPointCloud" output="screen"/>
+  <node name="ClusterExtraction" pkg="kinect_features" type="cluster_extraction" output="screen"/>
+  <node name="PFHExtractor" pkg="kinect_features" type="normal_extraction" output="screen"/>
+</launch>
